@@ -25,12 +25,12 @@ setInterval(function(){
 
 bIcon.onclick =function(){
   head.classList.toggle('s');
-  this.style.display = 'none'
+  this.style.display = 'none';
 }
 
 close.onclick = function(){
   this.parentElement.classList.remove('s');
-  bIcon.style.display = 'flex'
+  bIcon.style.display = 'flex';
 }
 
 // End Of The Code ..
