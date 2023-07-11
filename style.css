@@ -1,270 +1,245 @@
-
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
-
-/* Styleing Main Div */
 .main {
-  width: 90%;
-  min-height: 100vh;
-  padding: 20px;
-  margin: 0 auto;
-  background-color: #444;
+    width: 90%;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #444;
+}
+.burger-icon {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    top: 10px;
+    display: flex;
+    padding: 1px;
+    display: none; 
+    flex-wrap: wrap;
+    right: 5%;
+    align-items: center;
+    transition: .9s;
 }
 
-/* Style Our Burger Icon */
-.burger-icon{
-  position: absolute;
-  width: 30px;
-  height: 20px;
-  top: 10px;
-  display: flex;
-  padding: 1px;
-  display: none; 
-  flex-wrap: wrap;
-  right: 5%;
-  align-items: center;
-  transition: .9s;
-}
-
-/* Style Span into Burger Icon */
 .burger-icon span {
-  background: #999;
-  width: 100%;
-  height: 3px;
-  display: block;
+    background: #999;
+    width: 100%;
+    height: 3px;
+    display: block;
 }
 
-/* Style The Header Which Contain Navbar & Our H3*/
 .main .head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0 20px 0;
-  border-bottom: 2px solid red;
-  transition: .5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 20px 0;
+    border-bottom: 2px solid red;
+    transition: .5s ease-in-out;
 }
 
 .main .head.toggle {
-  transform: translateY(0);
-  display: flex;
-  align-content: space-around;
-  flex-direction: column;
-  background: rgba(0, 0, 0, .5);
-  color: #fff;
-  padding: 20px 0;
-  border: 0;
+    transform: translateY(0);
+    display: flex;
+    align-content: space-around;
+    flex-direction: column;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    padding: 20px 0;
+    border: 0;
 }
 
-/* Style Close Icon */
 .main .head .close {
-  position: fixed;
-  width: 29px;
-  height: 29px;
-  border: 2px solid red;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  right: 15px;
-  color: yellow;
-  top: 10px;
-  right: 8px;
-  font-weight: bold;
-  border-radius: 50%;
-  transition: .5s;
+    position: fixed;
+    width: 29px;
+    height: 29px;
+    border: 2px solid red;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    right: 15px;
+    color: yellow;
+    top: 10px;
+    right: 8px;
+    font-weight: bold;
+    border-radius: 50%;
+    transition: .5s;
 }
 .main .head h3 {
-  color: #fff;
+    color: #fff;
 }
 .main .head .close:hover {
-  background: #000;
-  color: red;
-  border-color: yellow;
+    background: #000;
+    color: red;
+    border-color: yellow;
 }
 
-/* Style a Element */
-.main .head nav a{
-  text-decoration: none;
-  margin-right: 7px;
-  font-size: 1.1rem;
-  color: #999;
-  padding: 5px 7px;
-  border-radius: 5px;
+.main .head nav a {
+    text-decoration: none;
+    margin-right: 7px;
+    font-size: 1.1rem;
+    color: #999;
+    padding: 5px 7px;
+    border-radius: 5px;
 }
 
 .main .head nav a:hover {
-  background-color: red;
-  color: yellow;
+    background-color: red;
+    color: yellow;
 }
-
+  
 .box {
-  width: 100%;
-  height: calc(100vh - 20pc);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-
+    width: 100%;
+    height: calc(100vh - 20pc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 } 
-.box .clock{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: #444;
-  box-shadow: 1px 1px 20px 20px green inset, 0 0 20px 10px white ;
-  border: 2px solid red;
+.box .clock {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #444;
+    box-shadow: 1px 1px 20px 20px green inset, 0 0 20px 10px white ;
+    border: 2px solid red;
 }
 
-.clock::after{
-  width: 310px;
-  height: 310px;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius:50%;
-  z-index: -1;
+.clock::after {
+    width: 310px;
+    height: 310px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius:50%;
+    z-index: -1;
 }
 
-.clock label{
-  position: absolute;
-  transform: rotate(calc(var(--i) * (360deg / 12)));
-  inset: 20px;
-  text-align: center;
-  color: #fff;
+.clock label {
+    position: absolute;
+    transform: rotate(calc(var(--i) * (360deg / 12)));
+    inset: 20px;
+    text-align: center;
+    color: #fff;
 }
 
-.clock label span{
-  display: inline-block;
-  font-size: 30px;
-  transform: rotate(calc(var(--i) * (-360deg / 12)));
-  font-weight: 600;
+.clock label span {
+    display: inline-block;
+    font-size: 30px;
+    transform: rotate(calc(var(--i) * (-360deg / 12)));
+    font-weight: 600;
 }
 
-.box .hand-box{
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  width: 10px;
-  height: 10px;
-  z-index: 100;
-  background-color: #fff;
+.box .hand-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 10px;
+    height: 10px;
+    z-index: 100;
+    background-color: #fff;
 }
 
-.hand-box::before{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, .1);
-  border-radius: 50%;
-  border: 5px solid rgb(0, 0, 228);
+.hand-box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    border: 5px solid rgb(0, 0, 228);
 }
 
-.hand-box .hand{
-  position: absolute;
-  height: 75px;
-  width: 8px;
-  border-radius: 50%;
-  bottom: 0;
-  background: rgb(122, 180, 228);
-  transform-origin: bottom;
+.hand-box .hand {
+    position: absolute;
+    height: 75px;
+    width: 8px;
+    border-radius: 50%;
+    bottom: 0;
+    background: rgb(122, 180, 228);
+    transform-origin: bottom;
 }
 
-.hand.minuts{
-  height: 85px;
-  width: 8px;
-  background: rgb(80, 107, 126);
+.hand.minuts {
+    height: 85px;
+    width: 8px;
+    background: rgb(80, 107, 126);
 }
 
-.hand.seconds{
-  height: 100px;
-  width: 8px;
-  background: #f0f;
+.hand.seconds {
+    height: 100px;
+    width: 8px;
+    background: #f0f;
 }
 
 /* Creat Simple Animation */
 @keyframes n {
-  to{
-    transform: rotatex(-360deg)
-  }
+    to{
+        transform: rotatex(-360deg)
+    }
 }
 
-/* Just One Media  */
+/* Just One Media Code */
 
-@media (max-width: 396px){
-  *{
-    font-size: 15px;
+@media (min-width: 300px) and (max-width: 500px) {
+    * {
+        font-size: 15px;
+    }
+    body {
+        background: #000;
+    }
+
+    .main {
+        width: 96%;
+    }
+    .main .box .clock{
+      width: 300px;
+      height: 300px;
+      margin: auto;
+      justify-self: center;
+      text-align: center;
+    }
+  
+    .main .head {
+      flex-direction: column;
+      height: 100%;
+      width: 95%;
+      position: fixed;
+      margin: 0 -4.7%;
+      top: 0;
+      transform: translateY(-125%);
+      transition: 0.5 ease-in-out;
+    }
+  
+    .main .burger-icon {
+      display: flex;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      height: 150px;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .main .head .close {
+      display: flex;
+      cursor: pointer;
+    }
+  
+    .main .head nav a {
+      color: #fff;
+    }
   }
-  body{
-    background: #000;
-  }
-
-  .main {
-    width: 95%;
-  }
-  .main .box .clock{
-    width: 90%;
-    height: 87%;
-    margin: auto;
-    justify-self: center;
-    text-align: center;
-  }
-
-  .main .head {
-    flex-direction: column;
-    height: 100%;
-    width: 95%;
-    position: fixed;
-    margin: 0 -5%;
-    top: 0;
-    transform: translateY(-125%);
-    transition: 0.5 ease-in-out;
-  }
-
-  .main .burger-icon {
-    display: flex;
-    cursor: pointer;
-  }
-  nav {
-    display: flex;
-    flex-direction: column;
-    height: 150px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .main .head .close {
-    display: flex;
-    cursor: pointer;
-  }
-
-  .main .head nav a {
-    color: #fff;
-  }
-}
-
-
-/* End Of The Code */ 
-
-
-
-
-
-
-
-
-
-
-
-
+  /* End Of The Code */ 
